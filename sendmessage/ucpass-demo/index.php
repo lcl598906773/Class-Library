@@ -3,8 +3,8 @@
 require_once('lib/Ucpaas.class.php');
 
 //初始化必填
-$options['accountsid']='655f72ceac46059ef455204e00ae922a';
-$options['token']='fb0acd0ac902bdbc7321e28efb1e0111';
+$options['accountsid']='';
+$options['token']='';
 
 
 //初始化 $options必填
@@ -83,10 +83,10 @@ $ucpass = new Ucpaas($options);
 $nums = '123456789';
 $yzm = substr(str_shuffle($nums),0,4);
 
-$appId = "ea07ccd86b2949718c4b88a509cca98e";
-$to = "18510632487";
-$templateId = "40807";
-$param='lclbbs,' . $yzm . ',3';
+$appId = "";
+$to = "";
+$templateId = "";
+$param=',' . $yzm . ',3';
 
 $res = $ucpass->templateSMS($appId,$to,$templateId,$param);
 $result = substr($res, 21, 6);
